@@ -1,2 +1,2 @@
-# Allocation-Is-Not-Ranking-How-Compositional-Queries-Break-Score-and-Cut-Retention-in-Memory-Systems
+# allocation-is-not-ranking
 Public repository for the author's paper experimental data
