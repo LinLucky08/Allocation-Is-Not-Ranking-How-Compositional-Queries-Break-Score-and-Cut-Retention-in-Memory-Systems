@@ -32,10 +32,12 @@ The raw 20 Newsgroups corpus is **not committed** (public dataset, ~7,500 files)
 
 `results/reconstruction_summary.md` documents the sweep behind the manuscript's
 Data Availability statement: the 16-group / 5,732-document configuration is
-reproducible in count — 297–355 exact-count hits per tokenisation, **all of
-which drop alt.atheism and comp.graphics** — while the identity of the remaining
-two dropped groups is not recoverable from the description. Re-run any time with
+reproducible in count — 355 / 354 / 297 / 306 exact-count hits per tokenisation,
+**each with a distinct dropped-group combination** (thresholds 25–46 tokens; no
+group is common to all solutions) — so the counts alone do not identify the
+dropped-group composition. Re-run any time with
 `python real/build_corpus.py`.
+
 
 
 ## Per-table index
