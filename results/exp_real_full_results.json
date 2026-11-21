@@ -1,0 +1,401 @@
+{
+ "conventions": {
+  "alpha_beta": "alpha=0, beta=1-gamma",
+  "popularity": "Zipf(s=1.1) by decreasing corpus size; p_hat_u = pi_g",
+  "conjunction": "centroids = mean token-count vectors; semantic = softmax(cos/0.6); sparse = top-40 pairs",
+  "optimum": "exhaustive group-subset enumeration (exact)",
+  "similarities": "TF-IDF cosine, LSA-256 (sparse SVD), raw-count cosine (replaces Doc2Vec), ideal = centroid + noise",
+  "mmr": "entry-level MMR with the given similarity; lambda grid 0..1 step 0.05, reported at best; stepwise = per-step (lambda, candidate) re-optimisation by immediate marginal gain"
+ },
+ "table3": [
+  {
+   "interaction": "uniform",
+   "gamma": 0.0,
+   "B": 5,
+   "optimal": 0.7108,
+   "ranking": 0.3301,
+   "greedy": 0.7108,
+   "r_rank": 0.464,
+   "r_greedy": 1.0,
+   "groups": "1/5/5"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.0,
+   "B": 11,
+   "optimal": 0.9084,
+   "ranking": 0.3301,
+   "greedy": 0.9084,
+   "r_rank": 0.363,
+   "r_greedy": 1.0,
+   "groups": "1/11/11"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.6833,
+   "ranking": 0.1651,
+   "greedy": 0.6833,
+   "r_rank": 0.242,
+   "r_greedy": 1.0,
+   "groups": "1/11/11"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.25,
+   "B": 11,
+   "optimal": 0.7982,
+   "ranking": 0.2476,
+   "greedy": 0.7982,
+   "r_rank": 0.31,
+   "r_greedy": 1.0,
+   "groups": "1/11/11"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.6881,
+   "ranking": 0.1651,
+   "greedy": 0.6881,
+   "r_rank": 0.24,
+   "r_greedy": 1.0,
+   "groups": "1/11/11"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.8,
+   "ranking": 0.1651,
+   "greedy": 0.7766,
+   "r_rank": 0.206,
+   "r_greedy": 0.971,
+   "groups": "1/11/11"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.5,
+   "B": 5,
+   "optimal": 0.3976,
+   "ranking": 0.1651,
+   "greedy": 0.3864,
+   "r_rank": 0.415,
+   "r_greedy": 0.972,
+   "groups": "1/5/5"
+  }
+ ],
+ "table4": [
+  {
+   "configuration": "uniform, gamma=0.0",
+   "B": 8,
+   "ranking": 0.398,
+   "mmr_best": 0.617,
+   "lambda": 0.05,
+   "mmr_stepwise": 0.617,
+   "greedy": 1.0
+  },
+  {
+   "configuration": "semantic, gamma=0.5",
+   "B": 8,
+   "ranking": 0.31,
+   "mmr_best": 0.554,
+   "lambda": 0.05,
+   "mmr_stepwise": 0.554,
+   "greedy": 1.0
+  },
+  {
+   "configuration": "sparse, gamma=0.5",
+   "B": 8,
+   "ranking": 0.282,
+   "mmr_best": 0.459,
+   "lambda": 0.05,
+   "mmr_stepwise": 0.459,
+   "greedy": 0.978
+  },
+  {
+   "configuration": "semantic, gamma=0.5",
+   "B": 5,
+   "ranking": 0.415,
+   "mmr_best": 0.653,
+   "lambda": 0.05,
+   "mmr_stepwise": 0.653,
+   "greedy": 1.0
+  },
+  {
+   "configuration": "semantic, gamma=0.5",
+   "B": 11,
+   "ranking": 0.24,
+   "mmr_best": 0.632,
+   "lambda": 0.1,
+   "mmr_stepwise": 0.5,
+   "greedy": 1.0
+  }
+ ],
+ "table5": [
+  {
+   "configuration": "semantic, gamma=0.5",
+   "B": 8,
+   "greedy": 1.0,
+   "tfidf": 0.554,
+   "count": 0.487,
+   "lsa": 0.624,
+   "ideal": 0.951
+  },
+  {
+   "configuration": "sparse, gamma=0.5",
+   "B": 8,
+   "greedy": 0.978,
+   "tfidf": 0.459,
+   "count": 0.426,
+   "lsa": 0.509,
+   "ideal": 0.757
+  },
+  {
+   "configuration": "semantic, gamma=0.5",
+   "B": 11,
+   "greedy": 1.0,
+   "tfidf": 0.632,
+   "count": 0.571,
+   "lsa": 0.588,
+   "ideal": 0.943
+  }
+ ],
+ "budget_sweep": [
+  {
+   "interaction": "semantic",
+   "B": 4,
+   "r_rank": 0.468,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 5,
+   "r_rank": 0.415,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 6,
+   "r_rank": 0.373,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 7,
+   "r_rank": 0.339,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 8,
+   "r_rank": 0.31,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 9,
+   "r_rank": 0.283,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 10,
+   "r_rank": 0.26,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 11,
+   "r_rank": 0.24,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 12,
+   "r_rank": 0.222,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 13,
+   "r_rank": 0.205,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "semantic",
+   "B": 14,
+   "r_rank": 0.19,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 4,
+   "r_rank": 0.49,
+   "r_greedy": 0.988,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 5,
+   "r_rank": 0.415,
+   "r_greedy": 0.972,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 6,
+   "r_rank": 0.357,
+   "r_greedy": 0.967,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 7,
+   "r_rank": 0.316,
+   "r_greedy": 0.978,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 8,
+   "r_rank": 0.282,
+   "r_greedy": 0.978,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 9,
+   "r_rank": 0.251,
+   "r_greedy": 0.959,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 10,
+   "r_rank": 0.225,
+   "r_greedy": 0.956,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 11,
+   "r_rank": 0.206,
+   "r_greedy": 0.971,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 12,
+   "r_rank": 0.189,
+   "r_greedy": 0.974,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 13,
+   "r_rank": 0.177,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  },
+  {
+   "interaction": "sparse",
+   "B": 14,
+   "r_rank": 0.172,
+   "r_greedy": 1.0,
+   "rank_groups": 1
+  }
+ ],
+ "lambda_bands": {
+  "uniform": {
+   "no_solution_steps": 2,
+   "bands": [
+    [
+     1,
+     0.05,
+     1.0
+    ],
+    [
+     4,
+     0.05,
+     0.15
+    ],
+    [
+     5,
+     0.05,
+     0.15
+    ],
+    [
+     11,
+     0.05,
+     0.25
+    ]
+   ],
+   "intersection_empty": false
+  },
+  "semantic": {
+   "no_solution_steps": 2,
+   "bands": [
+    [
+     1,
+     0.05,
+     1.0
+    ],
+    [
+     4,
+     0.05,
+     0.15
+    ],
+    [
+     5,
+     0.05,
+     0.15
+    ],
+    [
+     11,
+     0.05,
+     0.25
+    ]
+   ],
+   "intersection_empty": false
+  },
+  "sparse": {
+   "no_solution_steps": 8,
+   "bands": [
+    [
+     1,
+     0.05,
+     1.0
+    ],
+    [
+     3,
+     0.05,
+     0.15
+    ],
+    [
+     4,
+     0.05,
+     0.15
+    ],
+    [
+     4,
+     0.05,
+     0.15
+    ]
+   ],
+   "intersection_empty": false
+  }
+ }
+}

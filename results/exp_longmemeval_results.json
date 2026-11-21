@@ -1,0 +1,78 @@
+{
+ "conventions": {
+  "data": "longmemeval-cleaned release (2025/09); draft used the 2024 original",
+  "kept": "questions with 1-2 evidence sessions (abstention excluded)",
+  "coverage": "binary: all evidence sessions retained",
+  "spread": "evidence-blind one-turn-per-session in timeline order",
+  "oracle": "evidence sessions first, then one turn per remaining session",
+  "random": "5 seeds averaged"
+ },
+ "n_kept": 426,
+ "median_turns": 493,
+ "median_sessions": 48,
+ "rows": [
+  {
+   "budget": 0.002,
+   "recency": 0.016,
+   "random": 0.008,
+   "spread": 0.002,
+   "oracle": 0.413,
+   "groups_recency": 1,
+   "groups_spread": 1
+  },
+  {
+   "budget": 0.01,
+   "recency": 0.016,
+   "random": 0.048,
+   "spread": 0.019,
+   "oracle": 1,
+   "groups_recency": 1.1,
+   "groups_spread": 5.0
+  },
+  {
+   "budget": 0.05,
+   "recency": 0.042,
+   "random": 0.294,
+   "spread": 0.296,
+   "oracle": 1,
+   "groups_recency": 2.9,
+   "groups_spread": 24.7
+  },
+  {
+   "budget": 0.1,
+   "recency": 0.063,
+   "random": 0.574,
+   "spread": 0.988,
+   "oracle": 1,
+   "groups_recency": 5.3,
+   "groups_spread": 47.4
+  },
+  {
+   "budget": 0.15,
+   "recency": 0.096,
+   "random": 0.754,
+   "spread": 1,
+   "oracle": 1,
+   "groups_recency": 7.6,
+   "groups_spread": 47.9
+  },
+  {
+   "budget": 0.3,
+   "recency": 0.225,
+   "random": 0.954,
+   "spread": 1,
+   "oracle": 1,
+   "groups_recency": 14.9,
+   "groups_spread": 47.9
+  },
+  {
+   "budget": 0.5,
+   "recency": 0.369,
+   "random": 0.993,
+   "spread": 1,
+   "oracle": 1,
+   "groups_recency": 24.5,
+   "groups_spread": 47.9
+  }
+ ]
+}

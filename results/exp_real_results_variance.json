@@ -1,0 +1,172 @@
+{
+ "conventions": {
+  "note": "ranking uses within-group Zipf document popularity (s=1.2, filename order); other conventions identical to exp_real.py"
+ },
+ "rows": [
+  {
+   "interaction": "uniform",
+   "gamma": 0.0,
+   "B": 5,
+   "optimal": 0.7108,
+   "ranking": 0.5827,
+   "greedy": 0.7108,
+   "r_rank": 0.82,
+   "r_greedy": 1.0,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.0,
+   "B": 11,
+   "optimal": 0.9084,
+   "ranking": 0.7567,
+   "greedy": 0.9084,
+   "r_rank": 0.833,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.25,
+   "B": 11,
+   "optimal": 0.7959,
+   "ranking": 0.5988,
+   "greedy": 0.7959,
+   "r_rank": 0.752,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.5,
+   "B": 5,
+   "optimal": 0.397,
+   "ranking": 0.3039,
+   "greedy": 0.397,
+   "r_rank": 0.765,
+   "r_greedy": 1.0,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "uniform",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.6833,
+   "ranking": 0.4409,
+   "greedy": 0.6833,
+   "r_rank": 0.645,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.0,
+   "B": 5,
+   "optimal": 0.7108,
+   "ranking": 0.5827,
+   "greedy": 0.7108,
+   "r_rank": 0.82,
+   "r_greedy": 1.0,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.0,
+   "B": 11,
+   "optimal": 0.9084,
+   "ranking": 0.7567,
+   "greedy": 0.9084,
+   "r_rank": 0.833,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.25,
+   "B": 11,
+   "optimal": 0.798,
+   "ranking": 0.599,
+   "greedy": 0.798,
+   "r_rank": 0.751,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.5,
+   "B": 5,
+   "optimal": 0.3969,
+   "ranking": 0.3035,
+   "greedy": 0.3969,
+   "r_rank": 0.765,
+   "r_greedy": 1.0,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "semantic",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.6877,
+   "ranking": 0.4412,
+   "greedy": 0.6877,
+   "r_rank": 0.642,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.0,
+   "B": 5,
+   "optimal": 0.7108,
+   "ranking": 0.5827,
+   "greedy": 0.7108,
+   "r_rank": 0.82,
+   "r_greedy": 1.0,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.0,
+   "B": 11,
+   "optimal": 0.9084,
+   "ranking": 0.7567,
+   "greedy": 0.9084,
+   "r_rank": 0.833,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.25,
+   "B": 11,
+   "optimal": 0.8401,
+   "ranking": 0.5988,
+   "greedy": 0.8401,
+   "r_rank": 0.713,
+   "r_greedy": 1.0,
+   "groups": "6/11/11"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.5,
+   "B": 5,
+   "optimal": 0.4075,
+   "ranking": 0.2914,
+   "greedy": 0.3929,
+   "r_rank": 0.715,
+   "r_greedy": 0.964,
+   "groups": "3/5/5"
+  },
+  {
+   "interaction": "sparse",
+   "gamma": 0.5,
+   "B": 11,
+   "optimal": 0.8373,
+   "ranking": 0.4409,
+   "greedy": 0.8019,
+   "r_rank": 0.527,
+   "r_greedy": 0.958,
+   "groups": "6/11/11"
+  }
+ ]
+}
